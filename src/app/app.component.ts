@@ -7,12 +7,21 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import videojs from 'video.js';
 
+/* import Hls from 'hls.js'; */
+import videojs from 'video.js';
 /* import Hls from 'cdnbye'; */
 
-import 'cdnbye/dist/hlsjs-p2p-engine.min.js';
+// import 'cdnbye/dist/hlsjs-p2p-engine.min.js';
+// import 'cdnbye/dist/videojs-hlsjs-plugin.min.js';
+// import 'cdnbye/dist/videojs-hlsjs-plugin.min.js';
+
+import P2PEngine from 'cdnbye/dist/hlsjs-p2p-engine.min.js';
 import 'cdnbye/dist/videojs-hlsjs-plugin.min.js';
+import 'videojs-contrib-hls';
+import 'videojs-hlsjs-plugin';
+/* const videojsHlsjsSourceHandler = require('videojs-hlsjs-plugin');
+videojsHlsjsSourceHandler.register(videojs); */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
