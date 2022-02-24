@@ -8,7 +8,7 @@ import {
   ViewChild,
 } from '@angular/core';
 
-/* import Hls from 'hls.js'; */
+import Hls from 'hls.js';
 import videojs from 'video.js';
 /* import Hls from 'cdnbye'; */
 
@@ -17,8 +17,8 @@ import videojs from 'video.js';
 // import 'cdnbye/dist/videojs-hlsjs-plugin.min.js';
 
 import P2PEngine from 'cdnbye/dist/hlsjs-p2p-engine.min.js';
-import 'cdnbye/dist/videojs-hlsjs-plugin.min.js';
-import 'videojs-contrib-hls';
+/* import 'cdnbye/dist/videojs-hlsjs-plugin.min.js'; */
+/* import 'videojs-contrib-hls'; */
 import 'videojs-hlsjs-plugin';
 /* const videojsHlsjsSourceHandler = require('videojs-hlsjs-plugin');
 videojsHlsjsSourceHandler.register(videojs); */
@@ -71,6 +71,8 @@ export class AppComponent
         console.log('onPlayerReady', this);
       }
     ); */
+
+    console.log(window.videojs);
 
     videojs.Html5Hlsjs.addHook(
       'beforeinitialize',
